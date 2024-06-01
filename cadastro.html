@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where's My Family</title>
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="shortcut icon" href="imagens/favicon.ico">
+</head>
+<body>
+    
+    <main>
+        <header>
+            <img src="imagens/light.png" alt="sun" id="sun">
+            <img src="imagens/nightlight.png" alt="moon" id="moon">
+            <div class= "trilho" id="trilho"> 
+                <div class= "indicador">
+                </div>
+            </div>
+        </header>
+        <section class="container">
+            <article class="conteudo-esquerdo">
+                <h2>Crie alertas com informações do seu familiar</h2>
+                <p>Registre-se para localizar seus parentes perdidos e receba resultados de compatibilidade de fotos com outros usuários correspondentes.</p>
+                <img src="imagens/logo.png" alt="Logo da Where's My Family">
+            </article>
+
+            <article class="formulario">
+                <form action="#">
+                    <h3>Registre-se para localizar seus parentes</h3>
+                    <div class="input-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" required>
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="sobrenome">Sobrenome</label>
+                        <input type="text" id="sobrenome" name="sobrenome" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="input-group password-input">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" name="senha" required>
+                        <span class="password-toggle" onclick="togglePassword()">👁️</span>
+                    </div>
+
+                    <div class="input-group password-input">
+                        <label for="confirmarSenha">Confirme sua senha</label>
+                        <input type="password" id="confirmarSenha" name="confirmarSenha" required>
+                        <span class="password-toggle" onclick="togglePassword()">👁️</span>
+                    </div>
+
+                    <div class="button-group">
+                        <a href="#">Criar uma conta</a>
+                        <button type="submit">Continuar</button>
+                    </div>
+                </form>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        //script para esconder a senha do campo password
+        function togglePassword() {
+            var senhaInput = document.getElementById("senha");
+            if (senhaInput.type === "password") {
+                senhaInput.type = "text";
+            } else {
+                senhaInput.type = "password";
+            }
+        }
+    </script>
+
+    <script src="js/button.js"></script>
+</body>
+</html>
