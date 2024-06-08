@@ -2,6 +2,7 @@
     --spacing: 4px;
     --background-page: #E5E5FF;
     --background-section: #fff;
+    --primary: #303481;
 }
 
 body {
@@ -11,19 +12,76 @@ body {
 .header {
     background-color: var(--background-section);
     margin-top: 16px;
+    border-radius: 8px;
 }
 
-section {
+.family-section {
     background-color: var(--background-section);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: calc(var(--spacing) * 4);
+    border-radius: 8px;
 }
 
-section p {
+p {
     text-align: center;
+}
+
+.profile-section {
+    background-color: var(--background-section);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.profile-pic {
+    width: 120px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -60px;
+}
+
+.profile-info {
+    margin-top: 64px;
+}
+
+.image-background {
+    display: flex;
+    justify-content: center;
+    background-color: var(--primary);
+    height: 100px;
+    width: 100%;
+    position: relative;
+    border-radius: 8px 8px 0 0;
+}
+
+.members-section {
+    background-color: var(--background-section);
+    border-radius: 8px;
+    padding: calc(var(--spacing) * 2);
+}
+
+.members-profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+hr {
+    margin: 8px 0;
+}
+
+.members-message-item p {
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.members-message-item {
+    margin-left: 8px;
 }
 
 /* Margins helpers */
@@ -42,4 +100,29 @@ section p {
 
 .mt-4 {
     margin-top: calc(var(--spacing) * 4);
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-end {
+    justify-content: flex-end;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.px-0 {
+    padding-left: 0;
+    padding-right: 0;
 }
