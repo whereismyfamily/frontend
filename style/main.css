@@ -1,8 +1,45 @@
+:root {
+    --spacing: 4px;
+    --background-page: #E5E5FF;
+    --background-section: #fff;
+}
+
 body {
-    background-color: #E5E5FF;
+    background-color: var(--background-page);
 }
 
 .header {
-    background-color: #fff;
+    background-color: var(--background-section);
     margin-top: 16px;
+}
+
+section {
+    background-color: var(--background-section);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: calc(var(--spacing) * 4);
+}
+
+section p {
+    text-align: center;
+}
+
+/* Margins helpers */
+
+.mt-1 {
+    margin-top: calc(var(--spacing) * 1);
+}
+
+.mt-2 {
+    margin-top: calc(var(--spacing) * 2);
+}
+
+.mt-3 {
+    margin-top: calc(var(--spacing) * 3);
+}
+
+.mt-4 {
+    margin-top: calc(var(--spacing) * 4);
 }
