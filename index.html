@@ -7,21 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" type="text/css" />
     <link href="./style/main.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/e8c130368d.js" crossorigin="anonymous"></script>
     <title>Where's my family</title>
 </head>
 
 <body>
     <header class="mui-container-fluid px-8">
         <div class="header">
-            <div class="mui-row">
-                <div class="mui-col-md-4"><img src="./public/logo.png" alt=""></div>
-                <div class="mui-col-md-5">
-                    <div class="mui-textfield">
+            <div class="mui-row" class="container-row-header">
+                <div class="mui-col-md-2"><img src="./public/logo.png" alt="logo"></div>
+                <div class="mui-col-md-4">
+                    <div class="mui-textfield container-input-search">
+                        <i class="fa-solid fa-magnifying-glass fa-lg"></i>
                         <input type="text" placeholder="Procurar">
                     </div>
                 </div>
-                <div class="mui-col-md-3">
-                    <button class="mui-btn mui-btn--primary">Criar alerta</button>
+                <div class="mui-col-md-2">
+                    <button class="mui-btn btn-primary">Criar alerta <i class="fa-solid fa-arrow-right fa-lg"></i></button>
+                </div>
+                <div class="mui-col-md-1">
+                    <i class="fa-solid fa-bell fa-lg icon-primary"></i>
+                </div>
+                <div class="mui-col-md-1">
+                    <i class="fa-solid fa-ellipsis-vertical fa-lg icon-primary"></i>
                 </div>
             </div>
         </div>
