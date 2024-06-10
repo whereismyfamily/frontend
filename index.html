@@ -7,22 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" type="text/css" />
     <link href="./style/main.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/e8c130368d.js" crossorigin="anonymous"></script>
     <title>Where's my family</title>
 </head>
 
 <body>
     <header class="mui-container-fluid px-8">
         <div class="header">
-            <div class="mui-row">
-                <div class="mui-col-md-4"><img src="./public/logo.png" alt=""></div>
-                <div class="mui-col-md-5">
-                    <div class="mui-textfield">
-                        <input type="text" placeholder="Procurar">
+            <div class="mui-row d-flex justify-content-between align-items-center py-1 px-1">
+                <div class="mui-col-md-3"><img src="./public/logo.png" alt="logo"></div>
+                <div class="mui-col-md-6">
+                    <div class="d-flex align-items-center w-100 container-input-search">
+                        <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+                        <input type="text" placeholder="Procurar..." class="input-search w-100 ml-2">
                     </div>
                 </div>
-                <div class="mui-col-md-3">
-                    <button class="mui-btn mui-btn--primary">Criar alerta</button>
+                <div class="mui-col-md-3 d-flex align-items-center justify-content-around">
+                    <button class="mui-btn btn-primary">
+                        Criar alerta <i class="fa-solid fa-arrow-right fa-lg"></i></button>
+                    <button class="icon-button">
+                        <i class="fa-solid fa-bell fa-lg icon-primary"></i>
+                    </button>
+                    <button class="icon-button">
+                        <i class="fa-solid fa-ellipsis-vertical fa-lg icon-primary"></i>
+                    </button>
                 </div>
+
             </div>
         </div>
     </header>
@@ -30,33 +40,33 @@
         <div class="mui-row">
             <aside class="mui-col-md-3">
                 <section class="family-section">
-                    <p>Familia</p>
-                    <p>?</p>
-                    <p>Voce ainda nao se conectou com sua familia</p>
-                    <button class="mui-btn mui-btn--small mui-btn--primary">Encontrar minha familia</button>
-                    <button class="mui-btn mui-btn--small mui-btn--primary">Criar uma familia</button>
+                    <h3>Família</h3>
+                    <p class="mt-2 mb-2 txt-size-huge">?</p>
+                    <p>Você ainda não se conectou com sua família</p>
+                    <button class="mui-btn mui-btn--small btn-primary mui-btn--large mb-4 mt-1">Encontrar minha familia</button>
+                    <button class="mui-btn mui-btn--small btn-primary">Criar uma familia</button>
                 </section>
                 <section class="profile-section mt-4">
                     <div class="image-background">
-                        <img class="profile-pic" src="https://ui-avatars.com/api/?name=Vlad+Putin" alt="">
+                        <img class="profile-pic" src="public/profile-picture-putin.jpg" alt="Imagem de perfil">
                     </div>
-                    <div class="w-100 profile-info">
-                        <p>Vladimir Putin <span>71</span></p>
-                        <p>Sao Petersburgo - Russia</p>
-                        <p>7 de outubro, 1952</p>
+                    <div class="d-flex flex-column w-100 profile-info justify-content-center align-items-center">
+                        <h3><strong>Vladimir Putin</strong> <span>71</span></h3>
+                        <p><i class="fa-solid fa-location-dot icon-primary mr-1"></i></i>Sao Petersburgo - Russia</p>
+                        <p><i class="fa-regular fa-calendar icon-primary mr-1"></i>7 de outubro, 1952</p>
                         <hr>
-                        <div class="d-flex w-100 justify-content-center">
-                            <div class="mui-col-md-3">
-                                <p>32</p>
-                                <p>alertas</p>
+                        <div class="d-flex w-100 justify-content-center mui--divider-top">
+                            <div class="mui-col-md-3 mt-1">
+                                <p class="txt-size-large">32</p>
+                                <p>Alertas</p>
                             </div>
-                            <div class="mui-col-md-3">
-                                <p>32</p>
-                                <p>conexoes</p>
+                            <div class="mui-col-md-3 mt-1">
+                                <p class="txt-size-large">32</p>
+                                <p>Conexões</p>
                             </div>
-                            <div class="mui-col-md-3">
-                                <p>32</p>
-                                <p>matches</p>
+                            <div class="mui-col-md-3 mt-1">
+                                <p class="txt-size-large">32</p>
+                                <p>Matches</p>
                             </div>
                         </div>
                     </div>
