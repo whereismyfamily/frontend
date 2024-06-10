@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <header class="mui-container-fluid">
+    <header class="mui-container-fluid px-8">
         <div class="header">
             <div class="mui-row">
                 <div class="mui-col-md-4"><img src="./public/logo.png" alt=""></div>
@@ -26,7 +26,7 @@
             </div>
         </div>
     </header>
-    <div class="mui-container-fluid mt-4">
+    <div class="mui-container-fluid py-4 px-8">
         <div class="mui-row">
             <aside class="mui-col-md-3">
                 <section class="family-section">
@@ -70,15 +70,11 @@
                         <li><a data-mui-toggle="tab" data-mui-controls="support">Suporte</a></li>
                     </ul>
                 </nav>
-                <div class="mui-tabs__pane mui--is-active" id="general">Pane-1</div>
+                <div class="mui-tabs__pane mui--is-active" id="general">
+                    
+                </div>
                 <div class="mui-tabs__pane" id="alerts">Pane-2</div>
                 <div class="mui-tabs__pane" id="support">Pane-3</div>
-                <article>
-                    aa
-                </article>
-                <article>
-                    aa
-                </article>
             </main>
             <aside class="mui-col-md-3">
                 <section class="members-section">
@@ -123,49 +119,91 @@
                         <button class="mui-btn mui-btn--flat mui-btn--primary px-0">Todas mensagens</button>
                     </div>
                 </section>
-                <section class="matches-section">
-                    <h3>Familiares</h3>
+                <section class="matches-section mt-4">
+                    <h3>Correspondencias ao seu alerta</h3>
                     <div class="d-flex align-items-center">
                         <img class="members-profile-pic" src="https://ui-avatars.com/api/?name=Albert+Putin" alt="">
                         <div class="members-message-item">
-                            <p>Albert Putin</p>
-                            <p>Oh meu irmao, que saudade</p>
-                            <p>12:45</p>
+                            <p>Albert Putin, 66 anos</p>
+                            <p>80% compatibilidade com seu alerta</p>
+                            <p>Enviar mensagem ></p>
                         </div>
                     </div>
                     <hr>
                     <div class="d-flex align-items-center">
                         <img class="members-profile-pic" src="https://ui-avatars.com/api/?name=Albert+Putin" alt="">
                         <div class="members-message-item">
-                            <p>Albert Putin</p>
-                            <p>Oh meu irmao, que saudade</p>
-                            <p>12:45</p>
+                            <p>Albert Putin, 66 anos</p>
+                            <p>80% compatibilidade com seu alerta</p>
+                            <p>Enviar mensagem ></p>
                         </div>
                     </div>
                     <hr>
                     <div class="d-flex align-items-center">
                         <img class="members-profile-pic" src="https://ui-avatars.com/api/?name=Albert+Putin" alt="">
                         <div class="members-message-item">
-                            <p>Albert Putin</p>
-                            <p>Oh meu irmao, que saudade</p>
-                            <p>12:45</p>
+                            <p>Albert Putin, 66 anos</p>
+                            <p>80% compatibilidade com seu alerta</p>
+                            <p>Enviar mensagem ></p>
                         </div>
                     </div>
                     <hr>
-                    <div class="d-flex align-items-center">
-                        <img class="members-profile-pic" src="https://ui-avatars.com/api/?name=Albert+Putin" alt="">
-                        <div class="members-message-item">
-                            <p>Albert Putin</p>
-                            <p>Oh meu irmao, que saudade</p>
-                            <p>12:45</p>
-                        </div>
+
+                    <div>
+                        <p>Poucas correspondencias?</p>
+                        <p>Com um alerta mais detalhado, voce tem mais chance de encontrar seus familiares</p>
+                        <p>Melhorar alerta</p>
                     </div>
-                    <hr>
                 </section>
             </aside>
         </div>
     </div>
     <script src="https://cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>
+    <script>
+        const generalPostsList = document.getElementById('general')
+        const imagesToGeneratePerson = document.querySelectorAll('img.fake-person')
+
+        const populateGeneralPosts = (users) => {
+            for (user of users) {
+                const postElement = document.createElement('article')
+                postElement.className = 'post-section mt-3'
+                postElement.innerHTML = `
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center">
+                            <img class="post-profile-pic" src="https://ui-avatars.com/api/?name=Albert+Putin" alt="">
+                            <div class="ml-2">
+                                <p class="text-align-left">Alberto Putin</p>
+                                <p class="text-align-left">Primo de 1 grau</p>
+                            </div>
+                        </div>
+                        icone
+                    </div>
+                    <div class="post-description">
+                        <h3 class="m-0">Ajude-nos a encontrar ${user.gender === "male" ? 'nosso primo' : 'nossa prima'} <strong>${user.name.first} ${user.name.last}</strong></h3>
+                        <h5 class="m-0">A familia Putin esta em busca ${user.gender === "male" ? 'desse homem' : 'dessa mulher'}</h5>
+                    </div>
+                    <img class="post-image w-100" src="${user.picture.large}" alt="" />
+                    <ul class="pl-2 mt-2 mb-2">
+                        <li><strong>Idade: </strong> ${user.dob.age} anos</li>
+                        <li><strong>Ultima localizacao: </strong> 
+                            <ul>
+                                <li>${user.location.street.name}</li>
+                                <li>Cidade: ${user.location.city}</li>
+                                <li>Estado: ${user.location.state}</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="d-flex justify-content-end">
+                        <button>Comentar</button>
+                        <button>Apoiar</button>
+                    </div>
+                `
+                generalPostsList.appendChild(postElement)
+            }
+        }
+
+        fetch('https://randomuser.me/api/?results=10&nat=br').then(res => res.json()).then(res => populateGeneralPosts(res?.results))
+    </script>
 </body>
 
 </html>
