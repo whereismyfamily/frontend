@@ -7,6 +7,7 @@
 
 body {
     background-color: var(--background-page);
+    overflow: hidden;
 }
 
 .header {
@@ -63,7 +64,7 @@ p {
 .members-section {
     background-color: var(--background-section);
     border-radius: 8px;
-    padding: calc(var(--spacing) * 2);
+    padding: calc(var(--spacing) * 1.5) calc(var(--spacing) * 2);
 }
 
 .members-profile-pic {
@@ -82,7 +83,7 @@ hr {
 }
 
 .members-message-item {
-    margin-left: 8px;
+    margin-left: calc(var(--spacing) * 2);
 }
 
 .matches-section {
@@ -109,11 +110,17 @@ hr {
 
 .post-image {
     border-radius: 8px;
+    height: auto;
 }
+
 /* Margins helpers */
 
 .m-0 {
     margin: 0;
+}
+
+.p-0 {
+    padding: 0;
 }
 
 .mt-1 {
@@ -146,6 +153,10 @@ hr {
 
 .pl-2 {
     padding-left: calc(var(--spacing) * 2);
+}
+
+.pr-1 {
+    padding-right: calc(var(--spacing) * 1);
 }
 
 .py-4 {
@@ -189,4 +200,35 @@ hr {
 
 .text-align-left {
     text-align: left;
+}
+
+.overflow-y-scroll {
+    overflow-y: scroll;
+    height: 80vh;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    padding-left: calc(var(--spacing) * 1);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 8px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+ul {
+    list-style-type: none;
 }
