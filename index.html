@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href="./style/mui.css" rel="stylesheet" type="text/css" />
     <link href="./style/main.css" rel="stylesheet" type="text/css" />
-    <script src="https://kit.fontawesome.com/e8c130368d.js" crossorigin="anonymous"></script>
     <title>Where's my family</title>
 </head>
 
@@ -15,20 +15,22 @@
     <header class="mui-container-fluid px-8">
         <div class="header">
             <div class="mui-row d-flex justify-content-between align-items-center py-1 px-1">
-                <div class="mui-col-md-3"><img src="./public/logo.png" alt="logo"></div>
+                <div class="mui-col-md-3 d-flex align-items-center">
+                    <img src="./public/logo.png" alt="logo">
+                </div>
                 <div class="mui-col-md-6">
                     <div class="d-flex align-items-center w-100 container-input-search">
                         <i class="fa-solid fa-magnifying-glass fa-lg"></i>
                         <input type="text" placeholder="Procurar..." class="input-search w-100 ml-2">
                     </div>
                 </div>
-                <div class="mui-col-md-3 d-flex align-items-center justify-content-around">
-                    <button class="mui-btn btn-primary">
+                <div class="mui-col-md-3 d-flex align-items-center justify-content-end">
+                    <button class="mui-btn mui-btn--raised mui-btn--primary">
                         Criar alerta <i class="fa-solid fa-arrow-right fa-lg"></i></button>
-                    <button class="icon-button">
+                    <button class="icon-button ml-2">
                         <i class="fa-solid fa-bell fa-lg icon-primary"></i>
                     </button>
-                    <button class="icon-button">
+                    <button class="icon-button ml-2">
                         <i class="fa-solid fa-ellipsis-vertical fa-lg icon-primary"></i>
                     </button>
                 </div>
@@ -36,21 +38,23 @@
             </div>
         </div>
     </header>
-    <div class="mui-container-fluid py-4 px-8">
+    <div class="mui-container-fluid pt-4 px-8">
         <div class="mui-row">
             <aside class="mui-col-md-3">
                 <section class="family-section">
-                    <h3>Família</h3>
+                    <h3 class="m-0">Família</h3>
                     <p class="mt-2 mb-2 txt-size-huge">?</p>
                     <p>Você ainda não se conectou com sua família</p>
-                    <button class="mui-btn mui-btn--small btn-primary mui-btn--large mb-4 mt-1">Encontrar minha familia</button>
-                    <button class="mui-btn mui-btn--small btn-primary">Criar uma familia</button>
+                    <div class="d-flex flex-column justify-content-center">
+                        <button class="mui-btn mui-btn--raised mui-btn--primary mb-2 mt-3 w-100">Encontrar minha familia</button>
+                        <button style="margin: 0;" class="mui-btn mui-btn--raised mui-btn--primary w-100">Criar uma familia</button>
+                    </div>
                 </section>
                 <section class="profile-section mt-4">
                     <div class="image-background">
                         <img class="profile-pic" src="public/profile-picture-putin.jpg" alt="Imagem de perfil">
                     </div>
-                    <div class="d-flex flex-column w-100 profile-info justify-content-center align-items-center">
+                    <div class="d-flex flex-column w-100 profile-info justify-content-center align-items-center pb-1">
                         <h3><strong>Vladimir Putin</strong> <span>71</span></h3>
                         <p><i class="fa-solid fa-location-dot icon-primary mr-1"></i></i>Sao Petersburgo - Russia</p>
                         <p><i class="fa-regular fa-calendar icon-primary mr-1"></i>7 de outubro, 1952</p>
@@ -88,132 +92,21 @@
             </main>
             <aside class="mui-col-md-3">
                 <section class="members-section">
-                    <h3 class="m-0 mb-1">Familiares</h3>
-                    <div class="d-flex align-items-center">
-                        <img class="members-profile-pic" src="https://ui-avatars.com/api/?name=Albert+Putin" alt="">
-                        <div class="members-message-item">
-                            <p>Albert Putin</p>
-                            <p>Oh meu irmao, que saudade</p>
-                            <p>12:45</p>
-                        </div>
+                    <h3 class="m-0 mb-2">Conversas</h3>
+                    <div id="chat">
+
                     </div>
-                    <hr>
-                    <div class="d-flex align-items-center">
-                        <img class="members-profile-pic" src="https://ui-avatars.com/api/?name=Albert+Putin" alt="">
-                        <div class="members-message-item">
-                            <p>Albert Putin</p>
-                            <p>Oh meu irmao, que saudade</p>
-                            <p>12:45</p>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="d-flex align-items-center">
-                        <img class="members-profile-pic" src="https://ui-avatars.com/api/?name=Albert+Putin" alt="">
-                        <div class="members-message-item">
-                            <p>Albert Putin</p>
-                            <p>Oh meu irmao, que saudade</p>
-                            <p>12:45</p>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="d-flex align-items-center">
-                        <img class="members-profile-pic" src="https://ui-avatars.com/api/?name=Albert+Putin" alt="">
-                        <div class="members-message-item">
-                            <p>Albert Putin</p>
-                            <p>Oh meu irmao, que saudade</p>
-                            <p>12:45</p>
-                        </div>
-                    </div>
-                    <hr>
                     <div class="d-flex justify-content-end">
                         <button class="mui-btn mui-btn--flat mui-btn--primary px-0 m-0">Todas mensagens</button>
-                    </div>
-                </section>
-                <section class="matches-section mt-4">
-                    <h3 class="m-0 mb-1">Correspondencias ao seu alerta</h3>
-                    <div class="d-flex align-items-center">
-                        <img class="members-profile-pic" src="https://ui-avatars.com/api/?name=Albert+Putin" alt="">
-                        <div class="members-message-item">
-                            <p>Albert Putin, 66 anos</p>
-                            <p>80% compatibilidade com seu alerta</p>
-                            <p>Enviar mensagem ></p>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="d-flex align-items-center">
-                        <img class="members-profile-pic" src="https://ui-avatars.com/api/?name=Albert+Putin" alt="">
-                        <div class="members-message-item">
-                            <p>Albert Putin, 66 anos</p>
-                            <p>80% compatibilidade com seu alerta</p>
-                            <p>Enviar mensagem ></p>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="d-flex align-items-center">
-                        <img class="members-profile-pic" src="https://ui-avatars.com/api/?name=Albert+Putin" alt="">
-                        <div class="members-message-item">
-                            <p>Albert Putin, 66 anos</p>
-                            <p>80% compatibilidade com seu alerta</p>
-                            <p>Enviar mensagem ></p>
-                        </div>
-                    </div>
-                    <hr>
-
-                    <div>
-                        <p>Poucas correspondencias?</p>
-                        <p>Com um alerta mais detalhado, voce tem mais chance de encontrar seus familiares</p>
-                        <p>Melhorar alerta</p>
                     </div>
                 </section>
             </aside>
         </div>
     </div>
     <script src="https://cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>
-    <script>
-        const generalPostsList = document.getElementById('general')
-        generalPostsList.focus()
-
-        const populateGeneralPosts = (users, postOwners) => {
-            const maleRelatives = ['primo', 'irmao', 'pai', 'tio', 'sobrinho', 'avo', 'neto']
-            const femaleRelatives = ['prima', 'irma', 'mae', 'tia', 'sobrinha', 'avo', 'neta']
-            for (userIndex in users) {
-                const user = users[userIndex]
-                const postOwner = postOwners[userIndex]
-                const relative = user.gender === "male" ? maleRelatives[Math.floor(Math.random() * maleRelatives.length)] : femaleRelatives[Math.floor(Math.random() * maleRelatives.length)]
-                const postElement = document.createElement('article')
-                postElement.className = userIndex === '0' ? 'post-section' : 'post-section mt-3'
-                postElement.innerHTML = `
-                    <div class="d-flex align-items-center">
-                        <img class="post-profile-pic" src="https://ui-avatars.com/api/?name=${postOwner.name.first}+${user.name.last}" alt="">
-                        <div class="ml-1">
-                            <h4 class="m-0">${postOwner.name.first} ${user.name.last}</h4>
-                        </div>
-                    </div>
-                    <div class="post-description">
-                        <h3 class="m-0">Ajude ${postOwner.name.first} a reencontrar ${user.gender === "male" ? 'o' : 'a'} ${relative} <strong>${user.name.first} ${user.name.last}</strong></h3>
-                        <h5 class="m-0">Sua última localização conhecida foi em ${user.location.city.trim()}, e a família está ansiosa para reencontrá-l${user.gender === "male" ? 'o' : 'a'}. Se você tiver qualquer informação sobre seu paradeiro, por favor, <a>entre em contato com a familia ${user.name.last}.</a></h5>
-                    </div>
-                    <img class="post-image w-100" src="${user.picture.large}" alt="" />
-                    <ul class="p-0 mt-2 mb-2">
-                        <li><strong>Idade: </strong> ${user.dob.age} anos</li>
-                        <li><strong>Ultima localizacao: </strong> ${user.location.street.name.trim()}, ${user.location.city.trim()} - ${user.location.state}</li>
-                    </ul>
-                    <div class="d-flex justify-content-start">
-                        <button class="mui-btn mui-btn--flat mui-btn--primary m-0">Apoiar</button>
-                        <button class="mui-btn mui-btn--flat mui-btn--primary m-0">Comentar</button>
-                    </div>
-                `
-                generalPostsList.appendChild(postElement)
-            }
-        }
-
-        fetch('https://randomuser.me/api/?results=10&nat=br')
-            .then(res => res.json())
-            .then(res => fetch('https://randomuser.me/api/?results=10&nat=br')
-                .then(res2 => res2.json())
-                .then(res2 => populateGeneralPosts(res?.results, res2?.results))
-            )
-    </script>
+    <script src="https://kit.fontawesome.com/e8c130368d.js" crossorigin="anonymous"></script>
+    <script src="./js/feed.js"></script>
+    <script src="./js/chat.js"></script>
 </body>
 
 </html>
