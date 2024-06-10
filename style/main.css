@@ -376,9 +376,13 @@ ul {
 }
 
 .txt-size-huge {
-    font-size: 64px;
+    font-size: 50px;
 }
 
 .txt-size-large {
     font-size: 20px;
+}
+
+.txt-size-medium {
+    font-size: 16px;
 }
