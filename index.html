@@ -71,7 +71,7 @@
                     </ul>
                 </nav>
                 <div class="mui-tabs__pane mui--is-active overflow-y-scroll pr-1" id="general">
-                    
+
                 </div>
                 <div class="mui-tabs__pane" id="alerts">Pane-2</div>
                 <div class="mui-tabs__pane" id="support">Pane-3</div>
@@ -161,24 +161,27 @@
     <script src="https://cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>
     <script>
         const generalPostsList = document.getElementById('general')
-        const imagesToGeneratePerson = document.querySelectorAll('img.fake-person')
+        generalPostsList.focus()
 
-        const populateGeneralPosts = (users) => {
+        const populateGeneralPosts = (users, postOwners) => {
+            const maleRelatives = ['primo', 'irmao', 'pai', 'tio', 'sobrinho', 'avo', 'neto']
+            const femaleRelatives = ['prima', 'irma', 'mae', 'tia', 'sobrinha', 'avo', 'neta']
             for (userIndex in users) {
                 const user = users[userIndex]
+                const postOwner = postOwners[userIndex]
+                const relative = user.gender === "male" ? maleRelatives[Math.floor(Math.random() * maleRelatives.length)] : femaleRelatives[Math.floor(Math.random() * maleRelatives.length)]
                 const postElement = document.createElement('article')
                 postElement.className = userIndex === '0' ? 'post-section' : 'post-section mt-3'
                 postElement.innerHTML = `
                     <div class="d-flex align-items-center">
-                        <img class="post-profile-pic" src="https://ui-avatars.com/api/?name=Albert+Putin" alt="">
-                        <div class="ml-2">
-                            <p class="text-align-left">Alberto Putin</p>
-                            <p class="text-align-left">Primo de 1 grau</p>
+                        <img class="post-profile-pic" src="https://ui-avatars.com/api/?name=${postOwner.name.first}+${user.name.last}" alt="">
+                        <div class="ml-1">
+                            <h4 class="m-0">${postOwner.name.first} ${user.name.last}</h4>
                         </div>
                     </div>
                     <div class="post-description">
-                        <h3 class="m-0">Ajude-nos a encontrar ${user.gender === "male" ? 'nosso primo' : 'nossa prima'} <strong>${user.name.first} ${user.name.last}</strong></h3>
-                        <h5 class="m-0">A familia ${user.name.last} esta em busca ${user.gender === "male" ? 'desse homem' : 'dessa mulher'}</h5>
+                        <h3 class="m-0">Ajude ${postOwner.name.first} a reencontrar ${user.gender === "male" ? 'o' : 'a'} ${relative} <strong>${user.name.first} ${user.name.last}</strong></h3>
+                        <h5 class="m-0">Sua última localização conhecida foi em ${user.location.city.trim()}, e a família está ansiosa para reencontrá-l${user.gender === "male" ? 'o' : 'a'}. Se você tiver qualquer informação sobre seu paradeiro, por favor, <a>entre em contato com a familia ${user.name.last}.</a></h5>
                     </div>
                     <img class="post-image w-100" src="${user.picture.large}" alt="" />
                     <ul class="p-0 mt-2 mb-2">
@@ -194,7 +197,12 @@
             }
         }
 
-        fetch('https://randomuser.me/api/?results=10&nat=br').then(res => res.json()).then(res => populateGeneralPosts(res?.results))
+        fetch('https://randomuser.me/api/?results=10&nat=br')
+            .then(res => res.json())
+            .then(res => fetch('https://randomuser.me/api/?results=10&nat=br')
+                .then(res2 => res2.json())
+                .then(res2 => populateGeneralPosts(res?.results, res2?.results))
+            )
     </script>
 </body>
 
