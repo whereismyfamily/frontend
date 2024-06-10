@@ -44,6 +44,7 @@ p {
 
 .profile-pic {
     width: 120px;
+    height: 120px;
     border-radius: 50%;
     position: absolute;
     bottom: -60px;
@@ -145,8 +146,16 @@ hr {
     margin-bottom: calc(var(--spacing) * 2);
 }
 
+.mb-4 {
+    margin-bottom: calc(var(--spacing) * 4);
+}
+
 .ml-2 {
     margin-left: calc(var(--spacing) * 2);
+}
+
+.mr-1 {
+    margin-right: calc(var(--spacing) * 1);
 }
 
 .mt-3 {
@@ -156,6 +165,7 @@ hr {
 .mt-4 {
     margin-top: calc(var(--spacing) * 4);
 }
+
 
 .pl-2 {
     padding-left: calc(var(--spacing) * 2);
@@ -170,10 +180,26 @@ hr {
     padding-bottom: calc(var(--spacing) * 4);
 }
 
+.py-2 {
+    padding-top: calc(var(--spacing) * 2);
+    padding-bottom: calc(var(--spacing) * 2);
+}
+
+.py-1 {
+    padding-top: calc(var(--spacing) * 1);
+    padding-bottom: calc(var(--spacing) * 1);
+}
+
+.px-1 {
+    padding-left: calc(var(--spacing) * 1);
+    padding-right: calc(var(--spacing) * 1);
+}
+
 .px-8 {
     padding-left: calc(var(--spacing) * 8);
     padding-right: calc(var(--spacing) * 8);
 }
+
 
 .w-100 {
     width: 100%;
@@ -183,12 +209,24 @@ hr {
     display: flex;
 }
 
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
 .justify-content-center {
     justify-content: center;
 }
 
 .justify-content-between {
     justify-content: space-between;
+}
+
+.justify-content-around {
+    justify-content: space-around;
 }
 
 .justify-content-end {
@@ -208,22 +246,18 @@ hr {
     text-align: left;
 }
 
-.container-row-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 9px 16px
-}
 
 
 .btn-primary {
     background-color: var(--primary);
     color: #fff;
+    border-radius: 4px;
 }
 
 .btn-primary:hover {
     background-color: var(--primary-darker);
     color: #fff;
+    border-radius: 4px;
   }
 
 .icon-primary {
@@ -231,9 +265,6 @@ hr {
 }
 
 .container-input-search {
-    display: flex;
-    align-items: center;
-    width: 100%;
     border: 2px solid var(--primary);
     border-radius: 4px;
     padding: 10px;
@@ -275,20 +306,10 @@ ul {
     font-size: 20px;
 }
 
-.input-search[type="text"] {
-    width: 100%;
+.input-search {
     font-size: 16px;
     border: none;
     outline: none;
-    margin-left: 10px;
-}
-
-
-.flex-cont-row-spc-ard {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
 }
 
 .icon-button {
@@ -296,6 +317,7 @@ ul {
     border: none;
     outline: none;
     padding: 20px;
+    border-radius: 100%;
 }
 
 .icon-button:hover {
@@ -304,4 +326,12 @@ ul {
     outline: none;
     padding: 20px;
     border-radius: 100%;
+}
+
+.txt-size-huge {
+    font-size: 64px;
+}
+
+.txt-size-large {
+    font-size: 20px;
 }
