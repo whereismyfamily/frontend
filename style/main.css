@@ -3,11 +3,8 @@
     --background-page: #E5E5FF;
     --background-section: #fff;
     --primary: #303481;
-<<<<<<< HEAD
-=======
     --secondary: rgba(37, 13, 13, 0.15);
     --primary-darker: #252961;
->>>>>>> d255950 (centralizei, search bar quase la)
 }
 
 body {
