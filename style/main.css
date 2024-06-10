@@ -3,6 +3,11 @@
     --background-page: #E5E5FF;
     --background-section: #fff;
     --primary: #303481;
+<<<<<<< HEAD
+=======
+    --secondary: rgba(37, 13, 13, 0.15);
+    --primary-darker: #252961;
+>>>>>>> d255950 (centralizei, search bar quase la)
 }
 
 body {
@@ -208,25 +213,31 @@ hr {
 
 .container-row-header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding: 9px 16px
 }
 
+
 .btn-primary {
-    background-color: #303481;
+    background-color: var(--primary);
     color: #fff;
 }
 
+.btn-primary:hover {
+    background-color: var(--primary-darker);
+    color: #fff;
+  }
+
 .icon-primary {
-    color: #303481;
+    color: var(--primary);
 }
 
 .container-input-search {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    border: solid black 2px;
+    width: 100%;
+    border: 2px solid var(--primary);
     border-radius: 4px;
     padding: 10px;
 }
@@ -260,4 +271,40 @@ hr {
 
 ul {
     list-style-type: none;
+}
+
+.container-input-search i {
+    color: var(--primary);
+    font-size: 20px;
+}
+
+.input-search[type="text"] {
+    width: 100%;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    margin-left: 10px;
+}
+
+
+.flex-cont-row-spc-ard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.icon-button {
+    background-color: #fff;
+    border: none;
+    outline: none;
+    padding: 20px;
+}
+
+.icon-button:hover {
+    background-color: var(--secondary);
+    border: none;
+    outline: none;
+    padding: 20px;
+    border-radius: 100%;
 }

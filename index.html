@@ -14,23 +14,25 @@
 <body>
     <header class="mui-container-fluid px-8">
         <div class="header">
-            <div class="mui-row" class="container-row-header">
-                <div class="mui-col-md-2"><img src="./public/logo.png" alt="logo"></div>
-                <div class="mui-col-md-4">
-                    <div class="mui-textfield container-input-search">
+            <div class="mui-row container-row-header">
+                <div class="mui-col-md-3"><img src="./public/logo.png" alt="logo"></div>
+                <div class="mui-col-md-6">
+                    <div class="container-input-search">
                         <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-                        <input type="text" placeholder="Procurar">
+                        <input type="text" placeholder="Procurar..." class="input-search">
                     </div>
                 </div>
-                <div class="mui-col-md-2">
-                    <button class="mui-btn btn-primary">Criar alerta <i class="fa-solid fa-arrow-right fa-lg"></i></button>
+                <div class="mui-col-md-3 flex-cont-row-spc-ard">
+                    <button class="mui-btn btn-primary">
+                        Criar alerta <i class="fa-solid fa-arrow-right fa-lg"></i></button>
+                    <button class="icon-button">
+                        <i class="fa-solid fa-bell fa-lg icon-primary"></i>
+                    </button>
+                    <button class="icon-button">
+                        <i class="fa-solid fa-ellipsis-vertical fa-lg icon-primary"></i>
+                    </button>
                 </div>
-                <div class="mui-col-md-1">
-                    <i class="fa-solid fa-bell fa-lg icon-primary"></i>
-                </div>
-                <div class="mui-col-md-1">
-                    <i class="fa-solid fa-ellipsis-vertical fa-lg icon-primary"></i>
-                </div>
+
             </div>
         </div>
     </header>
