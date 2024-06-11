@@ -95,6 +95,20 @@ hr {
     margin-left: calc(var(--spacing) * 2);
 }
 
+.message-count {
+    font-weight: 700;
+    padding: 6px;
+    height: 8px;
+    width: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #de0a26;
+    color: #fff;
+    margin-left: 4px;
+}
+
 .message-name {
     color: var(--text-dark)
 }
@@ -123,6 +137,11 @@ hr {
 
 .post-description {
     padding: calc(var(--spacing) * 2) 0;
+}
+
+.post-profile-description {
+    font-weight: 300;
+    color: var(--text-lighter);
 }
 
 .post-image {
@@ -297,7 +316,7 @@ hr {
 }
 
 .overflow-y-scroll {
-    overflow-y: scroll;
+    overflow-y: auto;
     height: 80vh;
 }
 
