@@ -4,33 +4,47 @@ const familyName = document.getElementById("family-name")
 const containerBtnsFamily = document.getElementById("container-btns-family")
 const pFamily = document.getElementById("p-family")
 
-const populateMembers = async(user) => {
-    for(let i = 0; i <= 3; i++) {
-        const memberElement = document.createElement('div')
-        memberElement.innerHTML = `
-        <img class="members-profile-pic" src="${user.picture.large}" alt="">
-        <div>
-            <p class="message-name">${user.name.first} ${user.name.last}</p>
-        </div>
-        `
-    }
+const fetchUsers = async () => {
+    const response = await fetch('https://randomuser.me/api/?results=9&nat=br')
+    const data = await response.json()
+    return data.results
+    // .filter((_, index) => index <= 2)
 
 }
 
-function createFamily() {
-    familyName.innerHTML = "<p> Putin</p "
+const createFamilyMembers = async () => {
+    familyName.innerHTML = "<p>Putin</p "
     pFamily.innerHTML = ""
+    const users = await fetchUsers()
+    const relatives = {
+        "female": ["Avó", "Tia", "Mãe", "Irmã", "Prima", "Sobrinha", "Neta", "Madrinha", "Entiada"],
+        "male": ["Avô", "Tio", "Pai", "Irmão", "Primo", "Sobrinho", "Neto", "Padrinho", "Enteado"]
+    }
+
     containerBtnsFamily.innerHTML = `
         <ul class="mui-tabs__bar mui-tabs__bar--justified">
             <li class="mui--is-active"><a data-mui-toggle="tab" data-mui-controls="pane-justified-1">Visão geral</a></li>
             <li><a data-mui-toggle="tab" data-mui-controls="pane-justified-2">Membros</a></li>
         </ul>
         <div class="mui-tabs__pane mui--is-active" id="pane-justified-1">Pane-1</div>
-        <div class="mui-tabs__pane" id="pane-justified-2">
+    <div class="mui-tabs__pane" id="pane-justified-2"><ul class="overflow-y-scroll-100" id="list-members"></ul></div>
+    `
+    const listMembers = document.getElementById("list-members")
+    for (userIndex in users) {
+        const liMember = document.createElement("li")
+        const randomIndex = Math.floor(Math.random() * users.length)
+        const hr = document.createElement('hr')
+        liMember.className = 'd-flex'
+        liMember.innerHTML = `
+        <img class="members-profile-pic mr-1" src="${users[userIndex].picture.large}" alt="">
+        <div class="d-flex flex-column align-items-start">
+            <p class="message-name">${users[userIndex].name.first} ${users[userIndex].name.last}</p>
+            <p class="message-content">${relatives[users[userIndex].gender][randomIndex]}</p>
         </div>
     `
+        listMembers.appendChild(liMember)
+        listMembers.appendChild(hr)
+    }
 }
 
-btnCreateFamily.addEventListener("click", createFamily)
-
-fetch('https://randomuser.me/api/?results=9&nat=br').then(res => res.json()).then(res => populateMembers(res.results))
+btnCreateFamily.addEventListener("click", createFamilyMembers)
