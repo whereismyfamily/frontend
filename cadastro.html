@@ -51,20 +51,20 @@
                 <div class="input-group password-input">
                     <label for="senha">Senha</label>
                     <input type="password" id="senha" name="senha" required>
-                    <span class="password-toggle" onclick="togglePassword()">👁️</span>
+                    <span class="password-toggle" onclick="togglePassword1()">👁️</span>
                 </div>
 
                 <div class="input-group password-input">
                     <label for="confirmarSenha">Confirme sua senha</label>
                     <input type="password" id="confirmarSenha" name="confirmarSenha" required>
-                    <span class="password-toggle" onclick="togglePassword()">👁️</span>
+                    <span class="password-toggle" onclick="togglePassword2()">👁️</span>
                 </div>
 
                 <div class="button-group">
-                    <button onclick="window.location.pathname='frontend/login'"
+                    <button onclick="window.location.pathname='login.html'"
                         class="mui-btn mui-btn--flat mui-btn--primary px-0 m-0"><i
                             class="fa-solid fa-arrow-left fa-lg mr-1"></i> Entrar na sua conta</button>
-                    <button onclick="window.location.pathname='frontend'"
+                    <button onclick="window.location.pathname='index.html'"
                         class="mui-btn mui-btn--raised mui-btn--primary">Continuar<i
                             class="fa-solid fa-arrow-right fa-lg ml-1"></i> </button>
                 </div>
@@ -73,9 +73,18 @@
     </section>
 
     <script>
-        //script para esconder a senha do campo password
-        function togglePassword() {
+        //script para esconder a senha do campo password 1
+        function togglePassword1() {
             var senhaInput = document.getElementById("senha");
+            if (senhaInput.type === "password") {
+                senhaInput.type = "text";
+            } else {
+                senhaInput.type = "password";
+            }
+        }
+        //script para esconder a senha do campo password 2
+        function togglePassword2() {
+            var senhaInput = document.getElementById("confirmarSenha");
             if (senhaInput.type === "password") {
                 senhaInput.type = "text";
             } else {
