@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where's My Family</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href="./style/mui.css" rel="stylesheet" type="text/css" />
+    <link href="./style/circular-progess.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./style/login.css">
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="shortcut icon" href="public/favicon.ico">
+</head>
+
+<body>
+
+    <section class="container">
+        <article class="conteudo-esquerdo">
+            <img src="public/logo-big.png" width="500" height="500" alt="Logo da Where's My Family">
+        </article>
+
+        <article class="formulario">
+            <h2>Reencontre-se com sua família</h2>
+                <p>
+                    O WMF oferece uma abordagem moderna e sensível,<br> utilizando IA para identificar possíveis
+                    parentes,<br> com base em traços famíliares e informações compartilhadas.
+                </p>
+
+            <form action="#" method="post">
+                <h3>Faça login para começar sua busca!</h3>
+
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="input-group password-input">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" required>
+                    <span class="password-toggle" onclick="togglePassword()">👁️</span>
+                </div>
+
+                <div class="button-group">
+                    <button onclick="window.location.pathname='cadastro'" class="mui-btn mui-btn--flat mui-btn--primary px-0 m-0"><i class="fa-solid fa-arrow-left fa-lg mr-1"></i> Criar uma conta</button>
+                    <button onclick="window.location.pathname=''" class="mui-btn mui-btn--raised mui-btn--primary">Entrar<i class="fa-solid fa-arrow-right fa-lg ml-1"></i> </button>
+                </div>
+            </form>
+        </article>
+    </section>
+
+    <script>
+        //script para esconder a senha do campo password
+        function togglePassword() {
+            var senhaInput = document.getElementById("senha");
+            if (senhaInput.type === "password") {
+                senhaInput.type = "text";
+            } else {
+                senhaInput.type = "password";
+            }
+        }
+    </script>
+    <script src="https://cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>
+    <script src="https://kit.fontawesome.com/e8c130368d.js" crossorigin="anonymous"></script>
+    <script src="js/button.js"></script>
+</body>
+
+</html>

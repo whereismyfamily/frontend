@@ -1,0 +1,204 @@
+
+/* Configurações gerais da página */
+body {
+    background-color: #2f3082; /* Define a cor de fundo do corpo da página */
+    display: flex; /* Usa o modelo de layout flexível */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    justify-content: center; /* Alinha os itens horizontalmente ao centro */
+    height: 100vh; /* Define a altura do corpo da página como 100% da altura da viewport */
+}
+
+* {
+    font-family: 'Roboto';
+}
+
+/* Estilos do contêiner principal */
+.container {
+    width: 100%;
+    display: flex; /* Usa o modelo de layout flexível */
+    justify-content: center;
+    align-items: center;
+    gap: 128px;
+}
+
+/* Estilos para o formulário */
+
+.formulario p {
+    text-align: right;
+    width: 100%;
+    margin-bottom: calc(var(--spacing) * 8);
+}
+
+form {
+    background-color: var(--background-section);
+    padding: calc(var(--spacing) * 3); /* Adiciona preenchimento interno ao formulário */
+    border-radius: 8px; /* Adiciona borda arredondada ao formulário */
+}
+
+h2 {
+    color: var(--text-dark);
+    font-size: 34px;
+    text-align: right;
+}
+
+/* Estilos para o título do formulário */
+h3 {
+    margin: 0;
+    margin-bottom: calc(var(--spacing) * 4);
+    color: var(--text-dark);
+    font-size: 24px;
+}
+
+/* Estilos para os grupos de entrada (inputs) */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: calc(var(--spacing) * 3); /* Adiciona margem inferior aos grupos de entrada */
+}
+
+/* Estilos para o campo de senha */
+.password-input {
+    position: relative; /* Permite o posicionamento absoluto do ícone */
+}
+
+/* Estilos para o ícone de olho */
+.password-toggle {
+    position: absolute; /* Permite o posicionamento absoluto do ícone */
+    top: 62%; /* Alinha o ícone verticalmente ao centro */
+    right: 10px; /* Desloca o ícone para a direita */
+    transform: translateY(-50%); /* Centraliza o ícone verticalmente */
+    cursor: pointer; /* Altera o cursor para um ponteiro ao passar sobre o ícone */
+}
+
+/* Estilos para campos de texto, email e senha */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: calc(var(--spacing) * 2); /* Adiciona preenchimento interno aos campos de entrada */
+    border: 2px solid var(--primary); /* Adiciona uma borda ao redor dos campos de entrada */
+    border-radius: 4px; /* Adiciona borda arredondada aos campos de entrada */
+}
+
+/* Estilos para o grupo de botões */
+.button-group {
+    display: flex; /* Usa o modelo de layout flexível */
+    justify-content: space-between; /* Distribui os itens ao longo do eixo principal */
+    align-items: center;
+    margin-top: calc((var(--spacing) * 2));
+}
+
+/* Estilos para botões de envio */
+button[type="submit"] {
+    background-color: #2f3082; /* Define a cor de fundo dos botões de envio */
+    color: #fff; /* Define a cor do texto dos botões de envio */
+    border: none; /* Remove a borda dos botões de envio */
+    padding: 10px 20px; /* Adiciona preenchimento interno aos botões de envio */
+    border-radius: 5px; /* Adiciona borda arredondada aos botões de envio */
+    cursor: pointer; /* Altera o cursor para um ponteiro ao passar sobre os botões */
+    font-family: "Noto Sans", sans-serif;
+    letter-spacing: 1px;
+}
+
+/* Estilos para botões de envio quando passa o mouse */
+button[type="submit"]:hover {
+    background-color: #28285e; /* Altera a cor de fundo dos botões de envio quando passa o mouse */
+}
+
+
+
+/* dark theme */
+.trilho {
+    width: 70px;
+    height:30px ;
+    background-color: rgba(184, 180, 180, 0.753);
+    border-radius: 40px;
+    padding: 5px;
+    position: relative;
+    cursor: pointer;
+    border-top: 40px;
+    margin-left: 30px;
+    margin-top: -35px;
+}
+
+.trilho:hover {
+  background-color:rgba(156, 154, 154, 0.753);
+}
+
+.trilho .indicador {
+    width: 28px;
+    height: 28px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    transform: scale(.9);
+    left: 5px;
+    transition: .5s;
+    
+}
+
+.trilho.dark {
+    background-color: #4d4d4d;
+}
+
+.trilho.dark:hover {
+    background-color:#424242;
+}
+
+.trilho.dark .indicador {
+    left: 47px;
+    background-color: #0c0c1b;
+}
+
+body.dark {
+    background-color: #0c0c1b ;
+}
+
+body.dark .container {
+    background-color: #191930;
+}
+
+body.dark h2 {
+    color: #fff;
+}
+
+body.dark h3 {
+    color: #fff;
+}
+
+body.dark p {
+    color: #fff;
+}
+
+body.dark a {
+    color: #fff;
+}
+
+
+body.dark input {
+    background-color: #fff;
+}
+
+body.dark form {
+    background-color: #2f30824b;
+    border-color: #fff;
+    box-shadow: 0 5px 10px 5px #007bff;
+}
+
+body.dark .conteudo-esquerdo img {
+    background-color: #fff;
+    border-radius: 50%;
+    transition: .5s;
+    box-shadow: 0px 5px 5px 5px #007bff;
+}
+
+body.dark button {
+    background-color: #007bff;
+}
+
+body.dark button:hover {
+    background-color: #075fd3;
+}
+
+
+
+
