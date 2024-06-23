@@ -404,3 +404,15 @@ ul {
 .txt-size-medium {
     font-size: 16px;
 }
+
+.gap-1 {
+    gap: var(--spacing)
+}
+
+.gap-2 {
+    gap: calc(var(--spacing) * 2)
+}
+
+.gap-3 {
+    gap: calc(var(--spacing) * 3)
+}

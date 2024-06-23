@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Where's My Family</title>
-    <link rel="stylesheet" href="style/cadastro.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href="./style/mui.css" rel="stylesheet" type="text/css" />
+    <link href="./style/circular-progess.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./style/cadastro.css">
+    <link rel="stylesheet" href="./style/main.css">
     <link rel="shortcut icon" href="public/favicon.ico">
 </head>
-<body>
-    
-    <main>
-        <header>
-            <img src="public/light.png" alt="sun" id="sun">
-            <img src="public/nightlight.png" alt="moon" id="moon">
-            <div class= "trilho" id="trilho"> 
-                <div class= "indicador">
-                </div>
-            </div>
-        </header>
-        <section class="container">
-            <article class="conteudo-esquerdo">
-                <h2>Crie alertas com informações do seu familiar</h2>
-                <p>Registre-se para localizar seus parentes perdidos e receba resultados de compatibilidade de fotos com outros usuários correspondentes.</p>
-                <img src="public/logo-big.png" alt="Logo da Where's My Family">
-            </article>
 
-            <article class="formulario">
-                <form action="#">
-                    <h3>Registre-se para localizar seus parentes</h3>
+<body>
+    <section class="container">
+        <article class="conteudo-esquerdo">
+            <div class="mb-2">
+                <h2>Crie alertas com informações do seu familiar</h2>
+                <p>Registre-se para localizar seus parentes perdidos e receba resultados de compatibilidade de fotos
+                    com<br />
+                    outros usuários correspondentes.</p>
+
+            </div>
+            <img src="public/logo-big.png" width="500" height="500" alt="Logo da Where's My Family">
+        </article>
+
+        <article class="formulario">
+            <form action="#">
+                <h3>Registre-se para localizar seus parentes</h3>
+
+                <div class="d-flex gap-3">
                     <div class="input-group">
                         <label for="nome">Nome</label>
                         <input type="text" id="nome" name="nome" required>
-                        <i class="fa-solid fa-envelope"></i>
                     </div>
 
                     <div class="input-group">
@@ -39,31 +41,36 @@
                         <input type="text" id="sobrenome" name="sobrenome" required>
                     </div>
 
-                    <div class="input-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
+                </div>
 
-                    <div class="input-group password-input">
-                        <label for="senha">Senha</label>
-                        <input type="password" id="senha" name="senha" required>
-                        <span class="password-toggle" onclick="togglePassword()">👁️</span>
-                    </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
 
-                    <div class="input-group password-input">
-                        <label for="confirmarSenha">Confirme sua senha</label>
-                        <input type="password" id="confirmarSenha" name="confirmarSenha" required>
-                        <span class="password-toggle" onclick="togglePassword()">👁️</span>
-                    </div>
+                <div class="input-group password-input">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" required>
+                    <span class="password-toggle" onclick="togglePassword()">👁️</span>
+                </div>
 
-                    <div class="button-group">
-                        <a href="#">Criar uma conta</a>
-                        <button type="submit">Continuar</button>
-                    </div>
-                </form>
-            </article>
-        </section>
-    </main>
+                <div class="input-group password-input">
+                    <label for="confirmarSenha">Confirme sua senha</label>
+                    <input type="password" id="confirmarSenha" name="confirmarSenha" required>
+                    <span class="password-toggle" onclick="togglePassword()">👁️</span>
+                </div>
+
+                <div class="button-group">
+                    <button onclick="window.location.pathname='login'"
+                        class="mui-btn mui-btn--flat mui-btn--primary px-0 m-0"><i
+                            class="fa-solid fa-arrow-left fa-lg mr-1"></i> Entrar na sua conta</button>
+                    <button onclick="window.location.pathname=''"
+                        class="mui-btn mui-btn--raised mui-btn--primary">Continuar<i
+                            class="fa-solid fa-arrow-right fa-lg ml-1"></i> </button>
+                </div>
+            </form>
+        </article>
+    </section>
 
     <script>
         //script para esconder a senha do campo password
@@ -77,6 +84,9 @@
         }
     </script>
 
+    <script src="https://cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>
+    <script src="https://kit.fontawesome.com/e8c130368d.js" crossorigin="anonymous"></script>
     <script src="js/button.js"></script>
 </body>
+
 </html>
