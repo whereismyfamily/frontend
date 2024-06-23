@@ -163,6 +163,10 @@ hr {
     padding-bottom: calc(var(--spacing) * 1);
 }
 
+.m-1 {
+    margin: calc(var(--spacing) * 1);
+}
+
 .mt-1 {
     margin-top: calc(var(--spacing) * 1);
 }
@@ -278,8 +282,16 @@ hr {
     justify-content: flex-end;
 }
 
+.justify-content-start {
+    justify-content: flex-start;
+}
+
 .align-items-center {
     align-items: center;
+}
+
+.align-items-start {
+    align-items: flex-start;
 }
 
 .px-0 {
@@ -318,6 +330,12 @@ hr {
 .overflow-y-scroll {
     overflow-y: auto;
     height: 80vh;
+}
+
+.overflow-y-scroll-100 {
+    overflow-y: scroll;
+    height: 180px;
+
 }
 
 ::-webkit-scrollbar {
@@ -376,9 +394,13 @@ ul {
 }
 
 .txt-size-huge {
-    font-size: 64px;
+    font-size: 50px;
 }
 
 .txt-size-large {
     font-size: 20px;
+}
+
+.txt-size-medium {
+    font-size: 16px;
 }
