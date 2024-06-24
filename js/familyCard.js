@@ -8,8 +8,6 @@ const fetchUsers = async () => {
     const response = await fetch('https://randomuser.me/api/?results=9&nat=br')
     const data = await response.json()
     return data.results
-    // .filter((_, index) => index <= 2)
-
 }
 
 const createFamilyMembers = async () => {
@@ -27,7 +25,6 @@ const createFamilyMembers = async () => {
             <li><a data-mui-toggle="tab" data-mui-controls="pane-justified-2">Membros</a></li>
         </ul>
         <div class="mui-tabs__pane mui--is-active" id="pane-justified-1">
-        <h4>13 Membros</h4>
         </div>
     <div class="mui-tabs__pane" id="pane-justified-2"><ul class="overflow-y-scroll-100" id="list-members"></ul></div>
     `
