@@ -27,7 +27,7 @@
                     parentes,<br> com base em traços famíliares e informações compartilhadas.
                 </p>
 
-            <form action="#" method="post">
+            <form action="#" method="post" id="form">
                 <h3>Faça login para começar sua busca!</h3>
 
                 <div class="input-group">
@@ -41,9 +41,11 @@
                     <span class="password-toggle" onclick="togglePassword()">👁️</span>
                 </div>
 
+                <div id="error"></div>
+
                 <div class="button-group">
-                    <button onclick="window.location.pathname='frontend/cadastro'" class="mui-btn mui-btn--flat mui-btn--primary px-0 m-0"><i class="fa-solid fa-arrow-left fa-lg mr-1"></i> Criar uma conta</button>
-                    <button onclick="window.location.pathname='frontend'" class="mui-btn mui-btn--raised mui-btn--primary">Entrar<i class="fa-solid fa-arrow-right fa-lg ml-1"></i> </button>
+                    <button type="button" onclick="window.location.pathname='frontend/cadastro'" class="mui-btn mui-btn--flat mui-btn--primary px-0 m-0"><i class="fa-solid fa-arrow-left fa-lg mr-1"></i> Criar uma conta</button>
+                    <button type="submit" id="submitBtn" class="mui-btn mui-btn--raised mui-btn--primary">Entrar<i class="fa-solid fa-arrow-right fa-lg ml-1"></i> </button>
                 </div>
             </form>
         </article>
@@ -62,7 +64,7 @@
     </script>
     <script src="https://cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>
     <script src="https://kit.fontawesome.com/e8c130368d.js" crossorigin="anonymous"></script>
-    <script src="js/button.js"></script>
+    <script src="js/login.js"></script>
 </body>
 
 </html>

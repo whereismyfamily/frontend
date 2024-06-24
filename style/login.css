@@ -59,6 +59,7 @@ h3 {
 /* Estilos para o campo de senha */
 .password-input {
     position: relative; /* Permite o posicionamento absoluto do ícone */
+    margin-bottom: calc(var(--spacing));
 }
 
 /* Estilos para o ícone de olho */
