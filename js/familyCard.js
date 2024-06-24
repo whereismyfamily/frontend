@@ -26,7 +26,9 @@ const createFamilyMembers = async () => {
             <li class="mui--is-active"><a data-mui-toggle="tab" data-mui-controls="pane-justified-1">Visão geral</a></li>
             <li><a data-mui-toggle="tab" data-mui-controls="pane-justified-2">Membros</a></li>
         </ul>
-        <div class="mui-tabs__pane mui--is-active" id="pane-justified-1">Pane-1</div>
+        <div class="mui-tabs__pane mui--is-active" id="pane-justified-1">
+        <h4>13 Membros</h4>
+        </div>
     <div class="mui-tabs__pane" id="pane-justified-2"><ul class="overflow-y-scroll-100" id="list-members"></ul></div>
     `
     const listMembers = document.getElementById("list-members")
