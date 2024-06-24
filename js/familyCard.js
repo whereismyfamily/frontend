@@ -21,19 +21,18 @@ const createFamilyMembers = async () => {
 
     containerBtnsFamily.innerHTML = `
         <ul class="mui-tabs__bar mui-tabs__bar--justified">
-            <li class="mui--is-active"><a data-mui-toggle="tab" data-mui-controls="pane-justified-1">Visão geral</a></li>
-            <li><a data-mui-toggle="tab" data-mui-controls="pane-justified-2">Membros</a></li>
+            <li class="mui--is-active"><a data-mui-toggle="tab" data-mui-controls="pane-justified-1">Membros</a></li>
+            <li><a data-mui-toggle="tab" data-mui-controls="pane-justified-2">Visão geral</a></li>
         </ul>
-        <div class="mui-tabs__pane mui--is-active" id="pane-justified-1">
-        </div>
-    <div class="mui-tabs__pane" id="pane-justified-2"><ul class="overflow-y-scroll-100" id="list-members"></ul></div>
+        <div class="mui-tabs__pane" id="pane-justified-2"></div>
+        <div class="mui-tabs__pane mui--is-active" id="pane-justified-1"><ul class="overflow-y-scroll-100" style='padding:0; margin-top: 8px' id="list-members"></ul></div>
     `
     const listMembers = document.getElementById("list-members")
     for (userIndex in users) {
         const liMember = document.createElement("li")
         const randomIndex = Math.floor(Math.random() * users.length)
         const hr = document.createElement('hr')
-        liMember.className = 'd-flex'
+        liMember.className = 'd-flex w-100'
         liMember.innerHTML = `
         <img class="members-profile-pic mr-1" src="${users[userIndex].picture.large}" alt="">
         <div class="d-flex flex-column align-items-start">
